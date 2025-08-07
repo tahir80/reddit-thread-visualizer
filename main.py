@@ -8,7 +8,7 @@ import tempfile
 reddit = praw.Reddit(
     client_id=st.secrets["client_id"],
     client_secret=st.secrets["client_secret"],
-    user_agent="datascrapper by /u/Status-Ring1334""
+    user_agent="datascrapper by /u/Status-Ring1334"
 )
 
 # Extract post ID from URL or direct ID
@@ -101,5 +101,6 @@ if post_input:
     selected_comment = st.text_input("Enter a comment ID to generate code snippet:")
     if selected_comment:
         st.code(generate_code(post_id, selected_comment), language='python')
+
 
 
